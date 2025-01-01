@@ -1,22 +1,24 @@
 package com.project.testdata.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class TestDataModel{
+public class UserDataModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	private String name;
+	private String username;
 
-	private String data;
+	private String password;
+
+	private boolean superuser;
 
 }
